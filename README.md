@@ -1,1 +1,1 @@
-# rsschool-cv
+https://lost-fox.github.io/rsschool-cv/cv
