@@ -5,7 +5,7 @@ st. Chkalova, 35, apt. 63
 Minsk, Belarus   
 +375 (25) 530-27-43   
 oljaburak@mail.ru 
-  
+
 ## **ABOUT ME**
 Hello, my name is Olga Provedentseva. I want to become a Frontend Developer. 
 
@@ -45,3 +45,22 @@ Degree - Master of Pedagogical Sciences
 September 2013 - June 2017   
 Specialty - Professional training (informatics)   
 Qualification - teacher-programmer   
+
+## **COURSES**
+- GeekBrains. HTML / CSS. Interactive course
+- SkillBox. Web layout for beginners 2.0
+- Senla. React Developer
+- ITVDN. JavaScript Start
+- Udemy. Learn CSS
+- Udemy. Front End Web Development 2021
+- Udemy. Complete JavaScript with HTML CSS
+
+## **INTERACTIVE COURSES**
+- HTML Academy
+- Codecademy
+- Hexlet
+- Ru.Code-basics
+- CoderslandJS (free lessons)
+
+## **OTHER**
+FrontEnd webinars on various platforms (GeekBrains, ITVDN, YouTube)
