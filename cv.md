@@ -35,6 +35,17 @@ At the moment I am attending a preparatory course from RS School.
 
 ## **WORK EXPERIENCE**
 State Educational Institution "Secondary School No. 145 in Minsk", Minsk - ***computer science teacher***
-*September 2017 - December 2020*
+(*September 2017 - December 2020*)
 1. I took courses at MGIRO “Preparation for Olympiads in Informatics” in 2019
 2. I got the second qualification category in 2019
+
+## **EDUCATION**
+**BNTU, Minsk** – *Master*   
+September 2017 - June 2018   
+Specialty - Theory and methodology of professional education.   
+Degree - Master of Pedagogical Sciences   
+
+**BNTU, Minsk** – *bachelor*   
+September 2013 - June 2017   
+Specialty - Professional training (informatics)   
+Qualification - teacher-programmer   
