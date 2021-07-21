@@ -1,32 +1,91 @@
-*{
-   margin: 0;
-   padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
 // шрифты
-@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,700;1,400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,700;1,400&display=swap");
 
 // переменные
-$pink: #FBD6D7;
-$blue: #DCE2F2;
+$pink: #fbd6d7;
+$blue: #dce2f2;
 
-.container{
-   width: 595px;
-   height: 1000px;
-   margin: 0 auto;
-   background-color: #f9f9f9;
-   //padding: 25px;
-   font-family: 'Arimo', sans-serif;
-   color: #454B73;
+.container {
+  width: 595px;
+  height: 1000px;
+  margin: 0 auto;
+  background-color: #f9f9f9;
+  font-family: "Arimo", sans-serif;
+  color: #454b73;
 }
 
-.triangle-topleft{
-   position:absolute;
-   width: 0;
-   height: 0;
-   border-top: 249px solid $blue;
-   border-right: 332px solid transparent;
+.triangle-topleft {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 249px solid $blue;
+  border-right: 332px solid transparent;
 }
 
-.line{
-   position: absolute;
+.line {
+  position: absolute;
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+//==================header===========================
+
+.logo {
+  margin: 30px 64px 25px 71px;
+  z-index: 1;
+}
+
+.contacts {
+  margin: 28px 71px 45px 0px;
+  &__name {
+    h1 {
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 28px;
+    }
+    margin-bottom: 5px;
+  }
+  &__position {
+    margin-bottom: 6px;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 15px;
+    opacity: 0.6;
+  }
+  &__information {
+    width: 186px;
+    height: 20px;
+    background-color: $pink;
+    border-radius: 10px;
+    border-radius: 10px;
+    margin-top: 14px;
+    &-text {
+      padding-left: 12px;
+      padding-top: 6px;
+      font-size: 8px;
+      line-height: 9px;
+      opacity: 0.7;
+      &:hover {
+        opacity: 1;
+      }
+    }
+    &-circle {
+      width: 20px;
+      height: 20px;
+      background-color: #fff;
+      border-radius: 50%;
+      border: 1px solid #454b73;
+    }
+  }
+}
+.circle__ikon {
+  text-align: center;
 }
