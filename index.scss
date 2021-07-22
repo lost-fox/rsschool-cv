@@ -188,3 +188,54 @@ $blue: #dce2f2;
       }
    }
 }
+
+.skills{
+   &__text{
+      width: 172px;
+      li{
+         margin-top: 12px;
+         list-style-type: none; 
+         font-size: 8px;
+         justify-content: space-between;
+      }
+   }
+}
+
+.progress-bar{
+   width: 75px;
+   height: 5px;
+   background-color: #8D93B5;
+   position: relative;
+   span{
+      display: block;
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+   }
+} 
+.pink{
+         background-color:  $pink;
+      }
+      .blue{
+         background-color:  $blue;
+      }
+
+.courses{
+   &__text{
+      margin-top: 5px;
+      .courses-item{
+         margin-top: 15px;
+         
+         &__ring{
+            width: 10px;
+            height: 10px;
+            margin-right: 13px;
+            border-radius: 5px;
+            background-color: #8D93B5;
+         }
+         &__info{
+          font-size: 8px;  
+         }
+      }
+   }
+}      
