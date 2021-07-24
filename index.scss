@@ -11,7 +11,6 @@ $blue: #dce2f2;
 
 .container {
   width: 595px;
-  height: 1000px;
   margin: 0 auto;
   background-color: #f9f9f9;
   font-family: "Arimo", sans-serif;
@@ -269,3 +268,70 @@ $blue: #dce2f2;
       }
    }
 }
+
+//===================foooter============
+.background-footer-blue{
+   position:absolute;
+   height: 5px; 
+   width: 595px; 
+   margin-top: 60px;
+   &:before, &:after{
+      content: "";
+   height: 100%; 
+   width: 50%;
+   position: absolute; 
+   top: 0;
+   background: $blue;
+   }
+   &:before{
+      left: 0;
+   transform: skew(0deg, 5deg);
+   }
+   &:after{
+      right: 0;
+   transform: skew(0deg, -5deg);
+   }
+   }
+.background-footer-pink{
+      position:absolute;
+      height: 5px; 
+      width: 595px; 
+      margin-top: 70px;
+      &:before, &:after{
+         content: "";
+      height: 100%; 
+      width: 50%;
+      position: absolute; 
+      top: 0;
+      background: $pink;
+      }
+      &:before{
+         left: 0;
+      transform: skew(0deg, 5deg);
+      }
+      &:after{
+         right: 0;
+      transform: skew(0deg, -5deg);
+      }
+      }
+
+footer{
+   padding: 30px 25px;
+   justify-content: space-evenly;
+   position: relative;
+   z-index: 7;
+   a{
+      text-decoration: none;
+      margin-left: 15px;
+   }
+   .course-info{
+      margin-left: auto;
+      margin-right: 0;
+      &__year{
+        margin-top: 14px;
+        font-size: 13px;
+      }
+   }
+}
+
+
