@@ -1,0 +1,337 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+// шрифты
+@import url("https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,700;1,400&display=swap");
+
+// переменные
+$pink: #fbd6d7;
+$blue: #dce2f2;
+
+.container {
+  width: 595px;
+  margin: 0 auto;
+  background-color: #f9f9f9;
+  font-family: "Arimo", sans-serif;
+  color: #454b73;
+}
+
+.triangle-topleft {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 249px solid $blue;
+  border-right: 332px solid transparent;
+}
+
+.line {
+  position: absolute;
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+//==================header===========================
+
+.logo {
+  margin: 30px 64px 5px 71px;
+  z-index: 1;
+}
+
+.contacts {
+  margin: 28px 71px 25px 0px;
+  &__name {
+    h1 {
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 28px;
+    }
+    margin-bottom: 5px;
+  }
+  &__position {
+    margin-bottom: 6px;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 15px;
+    opacity: 0.6;
+  }
+  &__information {
+    width: 186px;
+    height: 20px;
+    background-color: $pink;
+    border-radius: 10px;
+    border-radius: 10px;
+    margin-top: 14px;
+    &-text {
+      padding-left: 12px;
+      padding-top: 6px;
+      font-size: 12px;
+      line-height: 9px;
+      opacity: 0.7;
+      &:hover {
+        opacity: 1;
+      }
+    }
+    &-circle {
+      width: 20px;
+      height: 20px;
+      background-color: #fff;
+      border-radius: 50%;
+      border: 1px solid #454b73;
+    }
+  }
+}
+.circle__ikon {
+  text-align: center;
+}
+
+//=============main===============
+.main__screen{
+   width: 307px;
+   margin-left: 40px;
+   margin-right: 40px;
+}
+
+.triangle-pink{
+   position: absolute;
+   width: 0;
+   height: 0;
+   border-top: 25px solid $pink;
+   border-right: 58px solid transparent;
+}
+
+.triangle-blue{
+   position: absolute;
+   width: 0;
+  height: 0;
+  border-top: 25px solid $blue;
+  border-right: 58px solid transparent;
+}
+.title{
+   margin-top: 20px;
+   position: relative;
+   width: 111px;
+   border: 0.5px solid #454B73;
+   padding: 6px 15px;
+   z-index: 2;
+   h3{
+   text-transform: uppercase;
+   text-align: center;
+   font-size: 13px;
+   line-height: 15px;  
+   font-weight: 400;
+   }
+}
+
+.profile{
+     &__text{
+      margin-top: 10px;
+      font-size: 10px;
+      line-height: 165%;
+
+   }
+}
+
+.line-border-blue{
+   width: 80px;
+   position: absolute;
+   border-bottom: 5px solid $blue;
+   margin-top: 5px;
+   margin-left: 225px;
+}
+
+.line-border-pink{
+   width: 80px;
+   position: absolute;
+   border-bottom: 5px solid $pink;
+   margin-top: 5px;
+   margin-left: 225px;
+}
+
+.education, .work{
+   margin-top: 20px;
+   &-text{
+      margin-top: 15px;
+      &__title{
+         font-size: 12px;
+         justify-content: space-between;
+         &-date{
+           position: relative;
+           z-index: 3; 
+         }
+   }
+   &__information{
+      margin-top: 10px;
+      font-size: 10px;
+      li{
+         margin-left: 10px;
+         margin-bottom: 4px;
+      }
+   }
+}
+}
+
+.hobbies{
+   &__img{
+      margin-top: 16px;
+      display:inline-flex;
+      vertical-align:top;
+      justify-content:center;
+      align-items:center;
+      svg{
+         margin-right: 16px;
+      }
+   }
+}
+
+.skills{
+   &__text{
+      width: 172px;
+      li{
+         margin-top: 12px;
+         list-style-type: none; 
+         font-size: 10px;
+         justify-content: space-between;
+      }
+   }
+}
+
+.progress-bar{
+   width: 75px;
+   height: 5px;
+   background-color: #8D93B5;
+   position: relative;
+   span{
+      display: block;
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+   }
+} 
+.pink{
+         background-color:  $pink;
+      }
+      .blue{
+         background-color:  $blue;
+      }
+
+.courses{
+   &__text{
+      margin-top: 5px;
+      .courses-item{
+         margin-top: 15px;
+         
+         &__ring{
+            width: 10px;
+            height: 10px;
+            margin-right: 13px;
+            border-radius: 5px;
+            background-color: #8D93B5;
+         }
+         &__info{
+          font-size: 8px;  
+         }
+      }
+   }
+}  
+
+.languages{
+   &__item{
+      margin-top: 15px;
+      p{
+         position: absolute;
+         margin-top: 5px;
+         margin-left: 45px;
+         text-transform: uppercase;
+         font-size: 8px;
+         font-weight: bold;
+      }
+      .progress-languages{
+         position: relative;
+         width: 120px;
+         height: 16px;
+         border-radius: 6px;
+         background-color: #fff;
+         border: 1px solid $blue;
+         padding: 1px;
+         span{
+            display: block;
+            height: 100%;            
+            border-radius: 6px;
+            position: relative;
+            overflow: hidden;
+         }
+      }
+   }
+}
+
+//===================foooter============
+.background-footer-blue{
+   position:absolute;
+   height: 5px; 
+   width: 595px; 
+   margin-top: 60px;
+   &:before, &:after{
+      content: "";
+   height: 100%; 
+   width: 50%;
+   position: absolute; 
+   top: 0;
+   background: $blue;
+   }
+   &:before{
+      left: 0;
+   transform: skew(0deg, 5deg);
+   }
+   &:after{
+      right: 0;
+   transform: skew(0deg, -5deg);
+   }
+   }
+.background-footer-pink{
+      position:absolute;
+      height: 5px; 
+      width: 595px; 
+      margin-top: 70px;
+      &:before, &:after{
+         content: "";
+      height: 100%; 
+      width: 50%;
+      position: absolute; 
+      top: 0;
+      background: $pink;
+      }
+      &:before{
+         left: 0;
+      transform: skew(0deg, 5deg);
+      }
+      &:after{
+         right: 0;
+      transform: skew(0deg, -5deg);
+      }
+      }
+
+footer{
+   padding: 30px 25px;
+   justify-content: space-evenly;
+   position: relative;
+   z-index: 7;
+   a{
+      text-decoration: none;
+      margin-left: 15px;
+   }
+   .course-info{
+      margin-left: auto;
+      margin-right: 0;
+      &__year{
+        margin-top: 14px;
+        font-size: 13px;
+      }
+   }
+}
+
+
