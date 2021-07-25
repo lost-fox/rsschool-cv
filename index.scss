@@ -55,7 +55,7 @@ $blue: #dce2f2;
   &__position {
     margin-bottom: 6px;
     font-weight: normal;
-    font-size: 13px;
+    font-size: 16px;
     line-height: 15px;
     opacity: 0.6;
   }
@@ -69,7 +69,7 @@ $blue: #dce2f2;
     &-text {
       padding-left: 12px;
       padding-top: 6px;
-      font-size: 8px;
+      font-size: 12px;
       line-height: 9px;
       opacity: 0.7;
       &:hover {
@@ -129,9 +129,8 @@ $blue: #dce2f2;
 
 .profile{
      &__text{
-      height: 52px;
       margin-top: 10px;
-      font-size: 8px;
+      font-size: 10px;
       line-height: 165%;
 
    }
@@ -158,7 +157,7 @@ $blue: #dce2f2;
    &-text{
       margin-top: 15px;
       &__title{
-         font-size: 10px;
+         font-size: 12px;
          justify-content: space-between;
          &-date{
            position: relative;
@@ -167,7 +166,7 @@ $blue: #dce2f2;
    }
    &__information{
       margin-top: 10px;
-      font-size: 8px;
+      font-size: 10px;
       li{
          margin-left: 10px;
          margin-bottom: 4px;
@@ -195,7 +194,7 @@ $blue: #dce2f2;
       li{
          margin-top: 12px;
          list-style-type: none; 
-         font-size: 8px;
+         font-size: 10px;
          justify-content: space-between;
       }
    }
