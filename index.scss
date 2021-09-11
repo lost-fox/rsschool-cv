@@ -10,11 +10,12 @@ $pink: #fbd6d7;
 $blue: #dce2f2;
 
 .container {
-  width: 605px;
+ max-width: 605px;
   margin: 0 auto;
   background-color: #f9f9f9;
   font-family: "Arimo", sans-serif;
   color: #454b73;
+  box-shadow: 0px 5px 10px 2px rgba(12, 13, 13, 0.2);
 }
 
 .triangle-topleft {
@@ -24,27 +25,47 @@ $blue: #dce2f2;
   border-top: 339px solid $blue;
   border-right: 422px solid transparent;
 }
+@media (max-width:426px)  {
+   .triangle-topleft{
+      border-right: 320px solid transparent;
+   }
+  }
 
 .line {
   position: absolute;
 }
 
-.flex {
+.flex-block, .flex {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
 }
+@media (max-width:580px)  {
+ .flex-block{
+    display: block;
+ }
+}
 a{
    text-decoration: none;
 }
+li{
+   list-style-type: none; 
+}
 
 //==================header===========================
+.background{
+   position: relative;
+}
+#menu__toggle {
+   display: none;
+ }
+
 .navigation{
    padding: 30px 80px;
    margin-left: 150px;
    justify-content: space-between;
    li{
-   list-style-type: none; 
+   
    z-index: 10;
    text-transform: uppercase;
    font-size: 14px;
@@ -56,14 +77,121 @@ li:hover{
 }
 }
 
+//humburger-menu
 
+@media (max-width: 560px) {
+   #menu__toggle {
+     opacity: 0;
+   }
+   #menu__toggle:checked ~ .menu__btn > span {
+      transform: rotate(45deg);
+      z-index: 12;
+    }
+    #menu__toggle:checked ~ .menu__btn > span::before {
+      top: 0;
+      transform: rotate(0);
+    }
+    #menu__toggle:checked ~ .menu__btn > span::after {
+      top: 0;
+      transform: rotate(90deg);
+    }
+    #menu__toggle:checked ~ .navigation {
+      visibility: visible;
+      left: 0;
+    }
+   
+    .menu__btn {
+      display: flex;
+      align-items: center;
+      position: absolute;
+      top: 34px;
+      left: 15%;
+   
+      width: 30px;
+      height: 20px;
+   
+      cursor: pointer;
+      z-index: 10;
+    }
+   
+    .menu__btn > span,
+    .menu__btn > span::before,
+    .menu__btn > span::after {
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 2px;
+   
+      background-color: #616161;
+   
+      transition-duration: 0.25s;
+    }
+    .menu__btn > span::before {
+      content: "";
+      top: -8px;
+    }
+    .menu__btn > span::after {
+      content: "";
+      top: 8px;
+    }
+   
+    .navigation {
+      padding: 0;
+      padding-bottom: 30px;
+      display: block;
+      position: relative;
+      visibility: hidden;
+      z-index: 3;
+      top: 0;
+      left: -100%;
+      margin: 0;
+      list-style: none;
+      background-color: #e8eaf1;
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+      transition-duration: 0.25s;
+    }
+
+    ul.navigation.flex{
+      position: absolute;
+      width: 100%;
+      display: block;
+
+    }
+   
+    .menu__link {
+      display: block;
+      padding: 2px 24px;
+      text-decoration: none;
+      transition-duration: 0.25s;
+    }
+    .navigation li {
+      text-align: center;
+      padding-top: 23px;
+    }
+}
+
+
+
+
+
+header{
+   position: relative;
+}
 .logo {
-  margin: 30px 64px 5px 71px;
+  margin: 20px 64px 5px 71px;
   z-index: 1;
 }
+@media (max-width:560px) {
+   .logo{
+    margin: 0;
+    padding-top: 70px;
+   }
+}
+
 
 .contacts {
   margin: 28px 71px 25px 0px;
+  
   &__name {
     h1 {
       font-weight: bold;
@@ -106,16 +234,30 @@ li:hover{
     }
   }
 }
+@media (max-width:580px) {
+   .contacts{
+    margin-left: 18%;
+   }
+}
 .circle__ikon {
   text-align: center;
   padding-top: 3px;
 }
 
 //=============main===============
+
+
 .main__screen{
    width: 307px;
    margin-left: 40px;
    margin-right: 40px;
+}
+
+@media (max-width:580px) {
+   .main__screen{
+    margin-left: 18%;
+    width: auto;
+   }
 }
 
 .triangle-pink{
@@ -158,6 +300,12 @@ li:hover{
    }
 }
 
+@media (max-width:400px) {
+   .profile__text{
+    width: 70%;
+   }
+}
+
 .line-border-blue{
    width: 110px;
    position: absolute;
@@ -197,6 +345,31 @@ li:hover{
 }
 }
 
+@media (max-width:580px)  {
+ .line-border-blue{
+      margin-left: 0;
+      margin-top: 10px;
+   }
+   .education-text__title-date{
+      margin-top: 6px;
+   }
+   .line-border-pink{
+      margin-left: 0;
+      margin-top: 10px;
+   }
+   .work-text__title-date{
+      margin-top: 6px;
+   }
+  }
+@media (max-width:400px) {
+   .education-text{
+    width: 260px;
+   }
+   .work-text__information{
+      width: 250px;
+   }
+}
+
 .hobbies{
    &__img{
       margin-top: 16px;
@@ -207,6 +380,11 @@ li:hover{
       svg{
          margin-right: 16px;
       }
+   }
+}
+@media (max-width:580px) {
+   aside{
+    margin-left: 18%;
    }
 }
 
@@ -305,8 +483,23 @@ li:hover{
    }
    code{
       margin: 0 40px;
-      background-color: #fce9ea;
+      background-color:#fce9ea;
       box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.4);
+      padding-left: 20%;
+   }
+}
+
+@media (max-width:400px) {
+   .code code{
+    padding-left: 5%;
+   }
+}
+
+@media (max-width:560px) {
+   .code__title{
+    margin: 0;
+    margin-left: 18%;
+    margin-top: 30px;
    }
 }
 
@@ -316,13 +509,21 @@ li:hover{
    }
 }
 
+@media (max-width:560px) {
+   .progect__title{
+    margin: 0;
+    margin-left: 18%;
+    margin-top: 30px;
+   }
+}
+
 .progect-item{
    margin: 30px 40px;
    &__img{
      margin: 20px 20px;
       img{
         width: 200px;
-      height: 200px; 
+      height: 170px; 
       &:hover{
          box-shadow: 0px 5px 6px 5px rgba(83, 117, 206, 0.35);
       }
@@ -344,12 +545,24 @@ li:hover{
    }
 }
 
-
+@media (max-width:580px) {
+   img{
+      display: block;
+      margin-left: auto;
+      margin-right: auto
+   }
+   .progect-item__information{
+      p{
+         text-align: center;
+      }
+   }
+}
 //===================foooter============
+
 .background-footer-blue{
    position:absolute;
    height: 5px; 
-   width: 595px; 
+   width: 605px; 
    margin-top: 60px;
    &:before, &:after{
       content: "";
@@ -368,10 +581,12 @@ li:hover{
    transform: skew(0deg, -5deg);
    }
    }
+
+   
 .background-footer-pink{
       position:absolute;
       height: 5px; 
-      width: 595px; 
+      width: 605px; 
       margin-top: 70px;
       &:before, &:after{
          content: "";
@@ -389,6 +604,15 @@ li:hover{
          right: 0;
       transform: skew(0deg, -5deg);
       }
+      }
+
+      @media (max-width:580px) {
+         .background-footer-blue{
+            width: 100%;
+         } 
+         .background-footer-pink{
+            width: 100%;
+         }
       }
 
 footer{
