@@ -9,6 +9,10 @@
 $pink: #fbd6d7;
 $blue: #dce2f2;
 
+html{
+   scroll-behavior: smooth;
+}
+
 .container {
  max-width: 605px;
   margin: 0 auto;
