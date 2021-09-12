@@ -10,44 +10,198 @@ $pink: #fbd6d7;
 $blue: #dce2f2;
 
 .container {
-  width: 595px;
+ max-width: 605px;
   margin: 0 auto;
   background-color: #f9f9f9;
   font-family: "Arimo", sans-serif;
   color: #454b73;
+  box-shadow: 0px 5px 10px 2px rgba(12, 13, 13, 0.2);
 }
 
 .triangle-topleft {
   position: absolute;
   width: 0;
   height: 0;
-  border-top: 249px solid $blue;
-  border-right: 332px solid transparent;
+  border-top: 339px solid $blue;
+  border-right: 422px solid transparent;
 }
+@media (max-width:426px)  {
+   .triangle-topleft{
+      border-right: 320px solid transparent;
+   }
+  }
 
 .line {
   position: absolute;
 }
 
-.flex {
+.flex-block, .flex {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
 }
+@media (max-width:580px)  {
+ .flex-block{
+    display: block;
+ }
+}
+a{
+   text-decoration: none;
+}
+li{
+   list-style-type: none; 
+}
 
 //==================header===========================
+.background{
+   position: relative;
+}
+#menu__toggle {
+   display: none;
+ }
 
+.navigation{
+   padding: 30px 80px;
+   margin-left: 150px;
+   justify-content: space-between;
+   li{
+   
+   z-index: 10;
+   text-transform: uppercase;
+   font-size: 14px;
+   color: black;
+}
+
+li:hover{
+   font-weight: 700;
+}
+}
+
+//humburger-menu
+
+@media (max-width: 760px) {
+   #menu__toggle {
+     opacity: 0;
+   }
+   #menu__toggle:checked ~ .menu__btn > span {
+      transform: rotate(45deg);
+      z-index: 12;
+    }
+    #menu__toggle:checked ~ .menu__btn > span::before {
+      top: 0;
+      transform: rotate(0);
+    }
+    #menu__toggle:checked ~ .menu__btn > span::after {
+      top: 0;
+      transform: rotate(90deg);
+    }
+    #menu__toggle:checked ~ .navigation {
+      visibility: visible;
+      left: 0;
+    }
+   
+    .menu__btn {
+      display: flex;
+      align-items: center;
+      position: absolute;
+      top: 34px;
+      left: 15%;
+   
+      width: 30px;
+      height: 20px;
+   
+      cursor: pointer;
+      z-index: 10;
+    }
+   
+    .menu__btn > span,
+    .menu__btn > span::before,
+    .menu__btn > span::after {
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 2px;
+   
+      background-color: #616161;
+   
+      transition-duration: 0.25s;
+    }
+    .menu__btn > span::before {
+      content: "";
+      top: -8px;
+    }
+    .menu__btn > span::after {
+      content: "";
+      top: 8px;
+    }
+   
+    .navigation {
+      padding: 0;
+      padding-bottom: 30px;
+      display: block;
+      position: relative;
+      visibility: hidden;
+      z-index: 3;
+      top: 0;
+      left: -100%;
+      margin: 0;
+      list-style: none;
+      background-color: #e8eaf1;
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+      transition-duration: 0.25s;
+    }
+
+    ul.navigation.flex{
+      position: absolute;
+      width: 100%;
+      display: block;
+
+    }
+   
+    .menu__link {
+      display: block;
+      padding: 2px 24px;
+      text-decoration: none;
+      transition-duration: 0.25s;
+    }
+    .navigation li {
+      text-align: center;
+      padding-top: 23px;
+    }
+}
+
+
+
+
+
+header{
+   position: relative;
+}
 .logo {
-  margin: 30px 64px 5px 71px;
+  margin: 20px 64px 5px 71px;
   z-index: 1;
 }
+@media (max-width:760px) {
+   header{
+    margin: 0;
+    padding-top: 70px;
+   }
+}
+@media (max-width:560px) {
+   .logo{
+    margin: 0;
+    padding-top: 70px;
+   }
+}
+
 
 .contacts {
   margin: 28px 71px 25px 0px;
+  
   &__name {
     h1 {
       font-weight: bold;
-      font-size: 24px;
+      font-size: 28px;
       line-height: 28px;
     }
     margin-bottom: 5px;
@@ -55,13 +209,13 @@ $blue: #dce2f2;
   &__position {
     margin-bottom: 6px;
     font-weight: normal;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 15px;
     opacity: 0.6;
   }
   &__information {
     width: 186px;
-    height: 20px;
+    height: 26px;
     background-color: $pink;
     border-radius: 10px;
     border-radius: 10px;
@@ -69,31 +223,47 @@ $blue: #dce2f2;
     &-text {
       padding-left: 12px;
       padding-top: 6px;
-      font-size: 12px;
-      line-height: 9px;
+      font-size: 14px;
+      line-height: 14px;
       opacity: 0.7;
       &:hover {
         opacity: 1;
+        font-weight: 700;
       }
     }
     &-circle {
-      width: 20px;
-      height: 20px;
+      width: 24px;
+      height: 24px;
       background-color: #fff;
       border-radius: 50%;
       border: 1px solid #454b73;
     }
   }
 }
+@media (max-width:580px) {
+   .contacts{
+    margin-left: 18%;
+   }
+}
 .circle__ikon {
   text-align: center;
+  padding-top: 3px;
 }
 
 //=============main===============
+
+
 .main__screen{
    width: 307px;
    margin-left: 40px;
    margin-right: 40px;
+}
+
+@media (max-width:580px) {
+   .main__screen{
+    margin-left: 18%;
+    width: auto;
+   }
 }
 
 .triangle-pink{
@@ -121,7 +291,7 @@ $blue: #dce2f2;
    h3{
    text-transform: uppercase;
    text-align: center;
-   font-size: 13px;
+   font-size: 16px;
    line-height: 15px;  
    font-weight: 400;
    }
@@ -130,26 +300,32 @@ $blue: #dce2f2;
 .profile{
      &__text{
       margin-top: 10px;
-      font-size: 10px;
+      font-size: 14px;
       line-height: 165%;
 
    }
 }
 
+@media (max-width:400px) {
+   .profile__text{
+    width: 70%;
+   }
+}
+
 .line-border-blue{
-   width: 80px;
+   width: 110px;
    position: absolute;
    border-bottom: 5px solid $blue;
    margin-top: 5px;
-   margin-left: 225px;
+   margin-left: 195px;
 }
 
 .line-border-pink{
-   width: 80px;
+   width: 110px;
    position: absolute;
    border-bottom: 5px solid $pink;
    margin-top: 5px;
-   margin-left: 225px;
+   margin-left: 195px;
 }
 
 .education, .work{
@@ -157,7 +333,7 @@ $blue: #dce2f2;
    &-text{
       margin-top: 15px;
       &__title{
-         font-size: 12px;
+         font-size: 14px;
          justify-content: space-between;
          &-date{
            position: relative;
@@ -166,13 +342,38 @@ $blue: #dce2f2;
    }
    &__information{
       margin-top: 10px;
-      font-size: 10px;
+      font-size: 12px;
       li{
          margin-left: 10px;
          margin-bottom: 4px;
       }
    }
 }
+}
+
+@media (max-width:580px)  {
+ .line-border-blue{
+      margin-left: 0;
+      margin-top: 10px;
+   }
+   .education-text__title-date{
+      margin-top: 6px;
+   }
+   .line-border-pink{
+      margin-left: 0;
+      margin-top: 10px;
+   }
+   .work-text__title-date{
+      margin-top: 6px;
+   }
+  }
+@media (max-width:400px) {
+   .education-text{
+    width: 260px;
+   }
+   .work-text__information{
+      width: 250px;
+   }
 }
 
 .hobbies{
@@ -187,6 +388,11 @@ $blue: #dce2f2;
       }
    }
 }
+@media (max-width:580px) {
+   aside{
+    margin-left: 18%;
+   }
+}
 
 .skills{
    &__text{
@@ -194,7 +400,7 @@ $blue: #dce2f2;
       li{
          margin-top: 12px;
          list-style-type: none; 
-         font-size: 10px;
+         font-size: 14px;
          justify-content: space-between;
       }
    }
@@ -202,7 +408,8 @@ $blue: #dce2f2;
 
 .progress-bar{
    width: 75px;
-   height: 5px;
+   height: 7px;
+   margin-top: 6px;
    background-color: #8D93B5;
    position: relative;
    span{
@@ -229,11 +436,12 @@ $blue: #dce2f2;
             width: 10px;
             height: 10px;
             margin-right: 13px;
-            border-radius: 5px;
+            margin-top: 3px;
+            border-radius: 8px;
             background-color: #8D93B5;
          }
          &__info{
-          font-size: 8px;  
+          font-size: 14px;  
          }
       }
    }
@@ -247,13 +455,13 @@ $blue: #dce2f2;
          margin-top: 5px;
          margin-left: 45px;
          text-transform: uppercase;
-         font-size: 8px;
+         font-size: 12px;
          font-weight: bold;
       }
       .progress-languages{
          position: relative;
-         width: 120px;
-         height: 16px;
+         width: 140px;
+         height: 20px;
          border-radius: 6px;
          background-color: #fff;
          border: 1px solid $blue;
@@ -269,11 +477,98 @@ $blue: #dce2f2;
    }
 }
 
+.code{
+   &__title{
+      margin: 0 40% 0 40%;
+   }
+   h5{
+      margin: 20px 0;
+      font-size: 16px;
+      text-transform: uppercase;
+      text-align: center;
+   }
+   code{
+      margin: 0 40px;
+      background-color:#fce9ea;
+      box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.4);
+      padding-left: 20%;
+   }
+}
+
+@media (max-width:400px) {
+   .code code{
+    padding-left: 5%;
+   }
+}
+
+@media (max-width:560px) {
+   .code__title{
+    margin: 0;
+    margin-left: 18%;
+    margin-top: 30px;
+   }
+}
+
+.progect{
+   &__title{
+      margin: 30px 40% 0 40%;
+   }
+}
+
+@media (max-width:560px) {
+   .progect__title{
+    margin: 0;
+    margin-left: 18%;
+    margin-top: 30px;
+   }
+}
+
+.progect-item{
+   margin: 30px 40px;
+   &__img{
+     margin: 20px 20px;
+      img{
+        width: 200px;
+      height: 170px; 
+      &:hover{
+         box-shadow: 0px 5px 6px 5px rgba(83, 117, 206, 0.35);
+      }
+      }
+      
+   }
+   &__information{
+      align-self: center;
+     h5{
+        margin-bottom: 20px;
+        text-align: center;
+        font-size: 20px;
+        text-transform: uppercase;
+     }
+     
+   }
+   &:nth-child(3){
+      flex-direction: row-reverse;
+   }
+}
+
+@media (max-width:580px) {
+   img{
+      display: block;
+      margin-left: auto;
+      margin-right: auto
+   }
+   .progect-item__information{
+      p{
+         text-align: center;
+      }
+   }
+}
 //===================foooter============
+
 .background-footer-blue{
    position:absolute;
    height: 5px; 
-   width: 595px; 
+   width: 605px; 
    margin-top: 60px;
    &:before, &:after{
       content: "";
@@ -292,10 +587,12 @@ $blue: #dce2f2;
    transform: skew(0deg, -5deg);
    }
    }
+
+   
 .background-footer-pink{
       position:absolute;
       height: 5px; 
-      width: 595px; 
+      width: 605px; 
       margin-top: 70px;
       &:before, &:after{
          content: "";
@@ -313,6 +610,15 @@ $blue: #dce2f2;
          right: 0;
       transform: skew(0deg, -5deg);
       }
+      }
+
+      @media (max-width:580px) {
+         .background-footer-blue{
+            width: 100%;
+         } 
+         .background-footer-pink{
+            width: 100%;
+         }
       }
 
 footer{
