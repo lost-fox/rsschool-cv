@@ -79,7 +79,7 @@ li:hover{
 
 //humburger-menu
 
-@media (max-width: 560px) {
+@media (max-width: 760px) {
    #menu__toggle {
      opacity: 0;
    }
@@ -180,6 +180,12 @@ header{
 .logo {
   margin: 20px 64px 5px 71px;
   z-index: 1;
+}
+@media (max-width:760px) {
+   header{
+    margin: 0;
+    padding-top: 70px;
+   }
 }
 @media (max-width:560px) {
    .logo{
