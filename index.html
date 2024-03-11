@@ -16,24 +16,10 @@
    <div class="container">
       <div class="background">
          <div class="triangle-topleft"></div>
-         <div class="hamburger-menu">
-            <nav>
-               <input id="menu__toggle" type="checkbox" />
-               <label class="menu__btn" for="menu__toggle">
-                  <span></span>
-               </label>
-               <ul class="navigation flex">
-                  <li><a href="#profile" class="menu__link">Profile</a></li>
-                  <li><a href="#skills" class="menu__link">skills</a></li>
-                  <li><a href="#project" class="menu__link">project</a></li>
-               </ul>
-            </nav>
-         </div>
-
          <header class="flex-block">
 
             <div class="logo">
-               <img src="image/logo.png" alt="photo CV">
+               <img class="logo__img" src="image/logo_2.png" alt="photo CV">
             </div>
             <div class="contacts">
                <div class="contacts__name">
@@ -114,11 +100,7 @@
                      </div>
 
                      <div class="profile__text">
-                        <p>Hello, my name is Olga Provedentseva. I want to become a <b>Frontend Developer</b>.<br>
-                           I am a responsible person, quick learner with a thirst for knowledge. Give me a chance to
-                           prove
-                           myself and you will <b>not regret it</b>.
-
+                        <p>Hello, my name is Olga Provedentseva. I am a responsible person, quick learner with a thirst for knowledge. Give me a chance to prove myself and you will not regret it.
                         </p>
                      </div>
                   </section>
@@ -181,19 +163,50 @@
                      <div class="work-text">
                         <div class="work-text__title flex-block">
                            <div class="work-text__title-place">
-                              <p><b> Computer Science Teacher</b></p>
+                              <p><b> Software engineer / <i>Symfa</i></b></p>
                            </div>
                            <div class="line-border-pink"></div>
                            <div class="work-text__title-date">
-                              <p>2017-09 - 2020-12</p>
+                              <p>2013-07 - now</p>
                            </div>
                         </div>
                         <ul class="work-text__information">
                            <li>
-                              I took courses at MGIRO “Preparation for Olympiads in Informatics” in 2019
+                              Working in an international team with a large volume of data
                            </li>
+                        </ul>
+                     </div>
+
+                     <div class="work-text">
+                        <div class="work-text__title flex-block">
+                           <div class="work-text__title-place">
+                              <p><b> Fullstack intership / <i>Symfa</i></b></p>
+                           </div>
+                           <div class="line-border-pink"></div>
+                           <div class="work-text__title-date">
+                              <p>2023-02 - 2023-05</p>
+                           </div>
+                        </div>
+                        <ul class="work-text__information">
                            <li>
-                              I got the second qualification category in 2019
+                              During the internship I worked with <i>HTML, SCSS/CSS, JS, TS, React, NestJS, MongoDB</i> 
+                           </li>
+                        </ul>
+                     </div>
+
+                     <div class="work-text">
+                        <div class="work-text__title flex-block">
+                           <div class="work-text__title-place">
+                              <p><b> Frontend Developer / <i>SagTech</i></b></p>
+                           </div>
+                           <div class="line-border-pink"></div>
+                           <div class="work-text__title-date">
+                              <p>2023-02 - 2023-06</p>
+                           </div>
+                        </div>
+                        <ul class="work-text__information">
+                           <li>
+                              Developing a website on <i>Next.js</i> using different libraries
                            </li>
                         </ul>
                      </div>
@@ -344,7 +357,7 @@
 
                      <div class="languages__item flex">
                         <div class="progress-languages">
-                           <span class="pink" style="width:30%"></span>
+                           <span class="pink" style="width:50%"></span>
                         </div>
                         <p>english</p>
                      </div>
@@ -356,78 +369,6 @@
                      </div>
                   </section>
                </aside>
-            </div>
-
-            <div class="experience">
-               <section id="project" class="project">
-                  <div class="project__title">
-                     <div class="triangle-pink"></div>
-                     <div class=" title ">
-                        <h3>
-                           project
-                        </h3>
-                     </div>
-                  </div>
-                  <div class="project-item flex-block">
-                     <div class="project-item__img">
-                        <a href="https://rolling-scopes-school.github.io/lost-fox-JSFE2021Q3/museum-dom/" target="_blank"><img src="https://user-images.githubusercontent.com/77030402/136860676-437b25b7-3cd7-44da-b76e-04a3b1c4dab3.png"
-                              alt="Louvre"></a>
-                     </div>
-                     <div class="project-item__information">
-                        <h5>Louvre</h5>
-                        <p>My first project. The site is dedicated to the Louvre Museum. <a href="https://github.com/lost-fox/museum" target="_blank"><u> Github</u></a><br><br>
-                           <i>Technologies used: HTML, CSS(SCSS), JS.</i></p>
-                     </div>
-                  </div>
-                  <div class="project-item flex-block">
-                     <div class="project-item__img">
-                        <a href="https://rolling-scopes-school.github.io/lost-fox-JSFE2021Q3/momentum/" target="_blank"><img
-                              src="https://user-images.githubusercontent.com/77030402/138775970-541c2968-f2c9-42df-a8bc-d91c2f99c3c4.png" alt="Momentum"></a>
-                     </div>
-                     <div class="project-item__information">
-                        <h5>Momentum</h5>
-                        <p> Helper app. Allows you to see the weather, time, listen to music, take notes and so on. You can customize the application according to your desires. Warning: All widgets are hidden on first load.  <a href="https://github.com/lost-fox/momentum" target="_blank"><u> Github</u></a><br><br>
-                          <i>Technologies used: HTML, CSS(SCSS), JS</i> </p>
-                     </div>
-                  </div>
-                  <div class="project-item flex-block">
-                     <div class="project-item__img">
-                        <a href="https://rolling-scopes-school.github.io/lost-fox-JSFE2021Q3/art-quiz/" target="_blank"><img src="https://user-images.githubusercontent.com/77030402/142941359-407297a1-dd93-4eff-b6d1-47eeb47db46f.png"
-                              alt="art quiz"></a>
-                     </div>
-                     <div class="project-item__information">
-                        <h5>Art quiz</h5>
-                        <p>
-                           A game in which you have to guess the artist and the painting. <a href="https://github.com/lost-fox/art-quiz" target="_blank"><u> Github</u></a> <br><br>
-                           <i>Technologies used: HTML, CSS(SCSS), JS, Webpack.</i></p>
-                     </div>
-                  </div>
-                  <div class="project-item flex-block">
-                     <div class="project-item__img">
-                        <a href="https://rolling-scopes-school.github.io/lost-fox-JSFE2021Q3/christmas-task/dist/" target="_blank"><img
-                              src="https://user-images.githubusercontent.com/77030402/146823525-4e3a5f84-63c9-49fb-9e7e-7cf387f94900.png" alt="christmas-task"></a>
-                     </div>
-                     <div class="project-item__information">
-                        <h5>Christmas task</h5>
-                        <p>Help grandma decorate the Christmas tree for the new year. Choose toys and hang them on the tree as soon as possible! <a href="https://github.com/lost-fox/christmas-task" target="_blank"><u> Github</u></a><br><br>
-                          <i>Technologies used: HTML, CSS(SCSS), TS, Webpack</i> </p>
-                     </div>
-                  </div>
-                  <div class="project-item flex-block">
-                     <div class="project-item__img">
-                        <a href="https://medium.com/@olkamichi/rs-clone-%D1%84%D0%B8%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9-%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82-%D0%B2-rsschool-79a1351fec1c" target="_blank">
-                           <img
-                              src="https://user-images.githubusercontent.com/77030402/155009954-90493fcd-0a71-4271-8e36-cd25756ddc0c.png" alt="christmas-task">
-                           </a>
-                     </div>
-                     <div class="project-item__information">
-                        <h5>Booking clone</h5>
-                        <p>Team project. Booking site clone. Details about the work of the site can be read by clicking on the picture. <br>
-                           In this project, I acted as a FullStack developer <a href="https://github.com/lost-fox/booking-clone" target="_blank"><u> Github</u></a><br><br>
-                          <i>Technologies used: FE - TS, React, Redux, Ant Design; BE - MongoDB, Express, NodeJS</i> </p>
-                     </div>
-                  </div>
-               </section>
             </div>
 
          </main>
